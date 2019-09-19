@@ -1,0 +1,133 @@
+import random
+indice = 0
+while True:
+    punti_scuderia1=0
+    punti_scuderia2=0
+    punti_scuderia3=0
+    punti_scuderia4=0
+    punti_scuderia5=0
+    punti_scuderia1t=0
+    punti_scuderia2t=0
+    punti_scuderia3t=0
+    punti_scuderia4t=0
+    punti_scuderia5t=0
+
+    print('''Ciao,
+    benvenuto al Phyton GP!''')
+    scuderia1=input('inserisci il nome della prima scuderia')
+    scuderia2=input('inserisci il nome della seconda scuderia')
+    scuderia3=input('inserisci il nome della terza scuderia')
+    scuderia4=input('inserisci il nome della quarta scuderia')
+    scuderia5=input('inserisci il nome della quinta scuderia')
+    for gara in range(0,5):
+        indice +=1
+        print(' Inizia la gara ' + str(indice))
+
+        punti_scuderia1 = random.random()
+        punti_scuderia2 = random.random()
+        punti_scuderia3 = random.random()
+        punti_scuderia4 = random.random()
+        punti_scuderia5 = random.random()
+
+        listaa = [punti_scuderia1, punti_scuderia2, punti_scuderia3, punti_scuderia4, punti_scuderia5]
+        primo = max(listaa)
+        listaa.remove (primo)
+        secondo = max(listaa)
+        listaa.remove(secondo)
+        terzo = max(listaa)
+        listaa.remove(terzo)
+        quarto = max(listaa)
+        listaa.remove(quarto)
+        quinto = max(listaa)
+        listaa.remove(quinto)
+
+        if primo == punti_scuderia1:
+            punti_scuderia1t += 4
+            print(scuderia1 + ' si piazza al primo posto!')
+        if primo == punti_scuderia2:
+            punti_scuderia2t += 4
+            print(scuderia2 + ' si piazza al primo posto!')
+        if primo == punti_scuderia3:
+            punti_scuderia3t += 4
+            print(scuderia3 + ' si piazza al primo posto!')
+        if primo == punti_scuderia4:
+            punti_scuderia4t += 4
+            print(scuderia4 + ' si piazza al primo posto!')
+        if primo == punti_scuderia5:
+            punti_scuderia5t += 4
+            print(scuderia5 + ' si piazza al primo posto!')
+        if secondo == punti_scuderia1:
+            punti_scuderia1t += 3
+            print(scuderia1 + ' si piazza al secondo posto!')
+        if secondo == punti_scuderia2:
+            punti_scuderia2t += 3
+            print(scuderia2 + ' si piazza al secondo posto!')
+        if secondo == punti_scuderia3:
+            punti_scuderia3t += 3
+            print(scuderia3 + ' si piazza al secondo posto!')
+        if secondo == punti_scuderia4:
+            punti_scuderia4t += 3
+            print(scuderia4 + ' si piazza al secondo posto!')
+        if secondo == punti_scuderia5:
+            punti_scuderia5t += 3
+            print(scuderia5 + ' si piazza al secondo posto!')
+        if terzo == punti_scuderia1:
+            punti_scuderia1t += 2
+            print(scuderia1 + ' si piazza al terzo posto!')
+        if terzo == punti_scuderia2:
+            punti_scuderia2t += 2
+            print(scuderia2 + ' si piazza al terzo posto!')
+        if terzo == punti_scuderia3:
+            punti_scuderia3t += 2
+            print(scuderia3 + ' si piazza al terzo posto!')
+        if terzo == punti_scuderia4:
+            punti_scuderia4t += 2
+            print(scuderia4 + ' si piazza al terzo posto!')
+        if terzo == punti_scuderia5:
+            punti_scuderia5t += 2
+            print(scuderia5 + ' si piazza al terzo posto!')
+        if quarto == punti_scuderia1:
+            punti_scuderia1t += 1
+            print(scuderia1 + ' si piazza al quarto posto!')
+        if quarto== punti_scuderia2:
+            punti_scuderia2t += 1
+            print(scuderia2 + ' si piazza al quarto posto!')
+        if quarto == punti_scuderia3:
+            punti_scuderia3t += 1
+            print(scuderia3 + ' si piazza al quarto posto!')
+        if quarto == punti_scuderia4:
+            punti_scuderia4t += 1
+            print(scuderia4 + ' si piazza al quarto posto!')
+        if quarto == punti_scuderia5:
+            punti_scuderia5t += 1
+            print(scuderia5 + ' si piazza al quarto posto!')
+        if quinto == punti_scuderia1:
+            punti_scuderia1t += 0
+            print(scuderia1 + ' si piazza al quinto posto!')
+        if quinto == punti_scuderia2:
+            punti_scuderia2t += 0
+            print(scuderia2 + ' si piazza al quinto posto!')
+        if quinto == punti_scuderia3:
+            punti_scuderia3t += 0
+            print(scuderia3 + ' si piazza al quinto posto!')
+        if quinto == punti_scuderia4:
+            punti_scuderia4t += 0
+            print(scuderia4 + ' si piazza al quinto posto!')
+        if quinto == punti_scuderia5:
+            punti_scuderia5t += 0
+            print(scuderia5 + ' si piazza al quinto posto!')
+
+        
+    print('\n\n\n FINE DEL CAMPIONATO; ECCO LA CLASSIFICA FINALE... ')
+    print(scuderia1 + ' ha totalizzato ' + str(punti_scuderia1t) + ' punti')
+    print(scuderia2 + ' ha totalizzato ' + str(punti_scuderia2t) + ' punti')
+    print(scuderia3 + ' ha totalizzato ' + str(punti_scuderia3t) + ' punti')
+    print(scuderia4 + ' ha totalizzato ' + str(punti_scuderia4t) + ' punti')
+    print(scuderia5 + ' ha totalizzato ' + str(punti_scuderia5t) + ' punti')
+
+    a = input('\n +++++++++++++++++++++++++++++++++\nVuoi generare una nuova edizione del Phyton GP? S/N')
+    if a == "s" or a == "S":
+        continue
+    else:
+        print('Ciao e alla prossima edizione del Phyton GP!')
+        break
